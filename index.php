@@ -1,13 +1,15 @@
 <?php
 require ('Controller/Frontend.php');
 
-$frontend = new Controller_Frontend();
+$frontend = new Controller_Frontend ();
 
-//echo 'hello';
 try{
-    if(isset($_GET['action'])){
-        if(isset($_GET['action']) == "index"){
+    if(isset($_GET['p'])){
+        if(isset($_GET['p']) == "index"){
             $frontend->index();
+        }
+        if(isset($_GET['p']) == "inscription"){
+            $frontend->inscription();
         }
     }
     else{
